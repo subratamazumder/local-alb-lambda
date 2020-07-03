@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    flask:
+        build: ./flask
+        container_name: flask
+        restart: always
+        environment: 
+            - LAMBDA_FUNCTION_NAME=function1
+            - FLASK_APP=run.py
+        expose: 
+            - 8080
+        ports: 
+            - "8080:8080"
