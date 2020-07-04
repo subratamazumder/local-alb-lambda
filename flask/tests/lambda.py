@@ -1,6 +1,12 @@
 def lambda_handler(event, context):
-    message = 'Hello {} {}!'.format(event['first_name'], 
-                                    event['last_name'])  
-    return { 
-        'message' : message
-    } 
+    print(event)
+    return {
+        "isBase64Encoded": False,
+        "statusCode": 200,
+        "statusDescription": "200 OK",
+        "headers": {
+            "Set-cookie": "cookies",
+            "Content-Type": "application/json"
+        },
+        "body": "Hello from Lambda (optional)"
+    }
