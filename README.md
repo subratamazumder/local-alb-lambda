@@ -1,6 +1,6 @@
 # Local ALB-LAMBDA
 
-This OSS project help to mock a ALB in a serverless use case where an ALB invokes Lambda function only.
+This OSS project help to mock a ALB in a serverless use case where an ALB invokes Lambda function which is mocked by [LocalStack](https://github.com/localstack/localstack).
 
 ## Start local ALB
 ```console
