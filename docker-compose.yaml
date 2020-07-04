@@ -4,10 +4,10 @@ services:
         build: ./flask
         container_name: flask
         restart: always
+        network_mode: bridge
         environment: 
             - LAMBDA_FUNCTION_NAME=function1
             - FLASK_APP=run.py
-        expose: 
-            - 8080
+            - LOCALSTACK_ENDPOINT=http://172.17.0.2:4566
         ports: 
             - "8080:8080"

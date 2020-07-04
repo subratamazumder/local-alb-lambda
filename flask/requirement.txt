@@ -1,3 +1,4 @@
+boto3==1.9.38
 click==7.1.2
 docutils==0.15.2
 Flask==1.1.2
