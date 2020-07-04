@@ -4,10 +4,26 @@ services:
         build: ./flask
         container_name: flask
         restart: always
-        network_mode: bridge
         environment: 
-            - LAMBDA_FUNCTION_NAME=function1
-            - FLASK_APP=run.py
-            - LOCALSTACK_ENDPOINT=http://172.17.0.2:4566
+            - LOCALSTACK_ENDPOINT=http://localstack:4566
         ports: 
             - "8080:8080"
+        links: 
+            - localstack
+    localstack:
+        container_name: "localstack_main"
+        image: localstack/localstack
+        expose: 
+            - 4566
+        ports:
+        - "4566-4599:4566-4599"
+        environment:
+        - SERVICES=lambda,cloudwatch
+        - DEBUG=1
+        - LAMBDA_EXECUTOR=docker
+        - DOCKER_HOST=unix:///var/run/docker.sock
+        - HOST_TMP_FOLDER=${TMPDIR}
+        volumes:
+        - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
+        - "/var/run/docker.sock:/var/run/docker.sock"
+            
