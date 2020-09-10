@@ -7,6 +7,8 @@ Technical conepts are taken from [AWS ALB Developer Guide](https://docs.aws.amaz
 
 ![Design](alb-local-hld.png)
 
+Here the Flask server acts a HTTP server which receives regular HTTP request and transform this request to an format which lambda can understand and then pass it to a consumer lambda using boto3 lambda client call. Once the response is returned by Lmbda, this also transforms back to a format which ALB can understand.
+
 ## Start local ALB
 ```console
 
