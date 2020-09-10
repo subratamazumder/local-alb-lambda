@@ -1,6 +1,7 @@
 # Local ALB-LAMBDA
 
-This OSS project help to mock a ALB in a serverless use case where an ALB invokes Lambda function which is mocked by [LocalStack](https://github.com/localstack/localstack). Technical conepts are taken from [AWS Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html)
+This OSS project helps to mock an AWS ALB in local system for a serverless use case where an ALB invokes Lambda function. This component is an add on on-top of [LocalStack](https://github.com/localstack/localstack) which can be used to Mock Lambda in local system. 
+Technical conepts are taken from [AWS ALB Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html)
 
 ![Design](alb-local-hld.png)
 
