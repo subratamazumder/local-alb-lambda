@@ -2,6 +2,8 @@
 
 This OSS project help to mock a ALB in a serverless use case where an ALB invokes Lambda function which is mocked by [LocalStack](https://github.com/localstack/localstack). Technical conepts are taken from [AWS Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html)
 
+![Design](alb-local-hld.png)
+
 ## Start local ALB
 ```console
 
