@@ -8,5 +8,5 @@ def lambda_handler(event, context):
             "Set-cookie": "cookies",
             "Content-Type": "application/json"
         },
-        "body": "Hello from Lambda (optional)"
+        "body": "Hello from Lambda"
     }

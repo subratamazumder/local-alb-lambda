@@ -2,7 +2,7 @@
 
 # Local ALB-LAMBDA
 
-This OSS project helps to mock an AWS ALB in local system for a serverless use case where an ALB invokes Lambda function. This component is an add on on-top of [LocalStack](https://github.com/localstack/localstack) which can be used to Mock Lambda in local system. 
+This OSS project helps to mock an [AWS ALB](https://aws.amazon.com/elasticloadbalancing/) in local system for a serverless use case where an ALB invokes Lambda function. This [python flask](https://flask.palletsprojects.com/en/1.1.x/) based component is an add on on-top of [LocalStack](https://github.com/localstack/localstack) which can be used to mock [Lambda](https://aws.amazon.com/lambda/) in local system. 
 Technical conepts are taken from [AWS ALB Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html)
 
 ![Design](alb-local-hld.png)
@@ -24,6 +24,15 @@ cd flask/tests
 python deploy-lambda-localstack.py
 
 curl -i -d '{"first_name":"pepa", "last_name":"pig"}' -H "Content-Type: application/json" -X POST http://localhost:8080/alb/hello
+
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 179
+Server: Werkzeug/1.0.1 Python/3.7.5
+Date: Thu, 10 Sep 2020 20:59:01 GMT
+
+{"body":"Hello from Lambda","headers":{"Content-Type":"application/json","Set-cookie":"cookies"},"isBase64Encoded":false,"statusCode":200,"statusDescription":"200 OK"} 
+
 
 python undeploy-lambda-localstack.py
 ```
