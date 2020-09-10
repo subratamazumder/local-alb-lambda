@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/subratamazumder/local-alb-lambda?style=for-the-badge)
+
 # Local ALB-LAMBDA
 
 This OSS project helps to mock an AWS ALB in local system for a serverless use case where an ALB invokes Lambda function. This component is an add on on-top of [LocalStack](https://github.com/localstack/localstack) which can be used to Mock Lambda in local system. 
