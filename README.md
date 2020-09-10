@@ -16,13 +16,11 @@ docker-compose up
 ```console
 cd flask/tests
 
-python3 test.py
-```
+python deploy-lambda-localstack.py
 
-## Test ALB via cURL
+curl -i -d '{"first_name":"pepa", "last_name":"pig"}' -H "Content-Type: application/json" -X POST http://localhost:8080/alb/hello
 
-```console
-curl -i -d '{"first_name":"pepa", "last_name":"pig"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/alb/hello
+python undeploy-lambda-localstack.py
 ```
 
 ## Miseleneous Commands
