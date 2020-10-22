@@ -39,7 +39,7 @@ Date: Thu, 10 Sep 2020 20:59:01 GMT
 python undeploy-lambda-localstack.py
 ```
 
-## Miseleneous Commands
+## Miscellaneous Commands
 
 ```console
 python3 -m venv env
